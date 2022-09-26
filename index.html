@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>贪吃蛇Snake</title>
+</head>
+<body>
+    <div class="panbg"></div>
+    <div class="btnbox">
+
+        <div class="score">score：<span>0</span></div>
+
+        <button id="start">start</button>
+        <button id="pause">pause</button>
+        <button id="restart">restart</button>
+    </div>
+    <div class="map">
+    </div>
+
+    <!-- <audio src="./img/tanchishe.mp3" autoplay></audio> -->
+    <script src="./food.js"></script>
+    <script src="./snake.js"></script>
+    <script src="./game.js"></script>
+
+
+    <script>
+        // const food = new Food(".map");
+        // const snake = new Snake(".map");
+        const game = new Game(".map",".score span",".panbg");
+
+        //拿到按钮
+        const start = document.querySelector("#start");
+        const pause = document.querySelector("#pause");
+        const restart = document.querySelector("#restart");
+
+        start.onclick = function(){
+            game.start();
+        }
+        pause.onclick = function(){
+            game.pause();
+        }
+        restart.onclick = function(){
+            game.restart();
+        }
+
+
+        //键盘监听 左37 上38 右39 下40  start13 pause32 
+        document.onkeydown = function(e){
+            // console.log(e.keyCode);  //用来得到上下左右开始结束等按钮的数值
+            switch (e.keyCode){
+                case 37:
+                    game.change("left");
+                    break;
+                case 38:
+                    game.change("top");
+                    break;
+                case 39:
+                    game.change("right");
+                    break;
+                case 40:
+                    game.change("buttom");
+                    break;
+                case 13:
+                    game.start();
+                    break;
+                case 32:
+                    game.pause();
+                    break;
+            }
+
+
+        }
+    </script>
+</body>
+</html>
