@@ -1,4 +1,4 @@
-//设计游戏类
+//游戏类
 class Game{
     constructor(select,scoreEle,gameoverbg){ 
         this.startbtn = document.querySelector("#start");
@@ -37,7 +37,7 @@ class Game{
                 clearInterval(this.timer);
                 this.gameover();
             }
-        },500)
+        },500);
     }
 
     //暂停
@@ -59,7 +59,7 @@ class Game{
 
     //得分增加
     scorechange(){
-        count++;
+        this.count++;
         this.scoreEle.innerText = this.count;
     }
 

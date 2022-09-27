@@ -28,7 +28,7 @@ class Food{
         const h_nub = this.map.clientHeight/20;  //50*30的格子
         //2.随机生成数字
         let n1 = Math.floor(Math.random() * w_nub);  //floor向下取整，random随机数
-        let n2 = Math.floor(Math.random() * h_nub);
+        let n2 = Math.floor(Math.random() * h_nub);  //random随机数
         console.log(n1,n2);  //得到两个随机数
         //3.根据随机数进行坐标位置的计算
         this.x = n1 * 20;  //随机数*20得到的才是坐标数

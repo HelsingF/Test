@@ -106,7 +106,7 @@ class Snake{
         const headX = head.offsetLeft;
         const headY = head.offsetTop;
 
-        if (headX < 0 || headY < 0 || headX >= this.map.clientWidth || headY >= this.map.clientHight){
+        if (headX < 0 || headY < 0 || headX >= this.map.clientWidth || headY >= this.map.clientHeight){
             return true;
         }
         return false;

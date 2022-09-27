@@ -6,7 +6,8 @@ html,body{
     height: 100%;
 }
 body{
-    background: url(./img/bg.jpg) no-repeat;
+    /* 背景图 */
+    background: url(./img/bg1.jpg) no-repeat;
     background-size: cover;
 }
 .btnbox{
@@ -35,7 +36,7 @@ body{
     height: 600px;
     background: url(./img/mapbg.png);
     position: fixed;
-    top: 3;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -61,8 +62,8 @@ div.body{
 div.food{
     background: radial-gradient(#a7fa64,#4f7524);
     animation: foodAnimate 1s linear infinite;
-    left: 400px;
-    top: 40px;
+    /* left: 400px;
+    top: 40px; */
 }
 @keyframes foodAnimate {
     0%{
@@ -92,7 +93,7 @@ div.food{
     background-position: center;
     position: fixed;
     z-index: 999;
-    top: 3;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
